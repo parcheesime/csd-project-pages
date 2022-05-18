@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <title>Student Websites</title>
-    <link rel="stylesheet" href="style.css">
+     <py-env>
+        - bs4
+    </py-env>
 </head>
 <body>
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="websites.html">Student Websites</a>
-    <a href="javascript.html">Student Javascript Programs</a>
+   <py-script>
+import requests
+from bs4 import BeautifulSoup
 
-</div>
-<h1>
-    Student Websites
-</h1>
+URL = "https://codeprojects.org/VoP_lzaZzLWjc7BGzEYbFSMyTbHfdb29WN12Rg4U-Hw/"
+r = requests.get(URL)
+
+soup = BeautifulSoup(r.content, 'html5lib')
+print(soup.prettify())
+   </py-script>
 </body>
 </html>
