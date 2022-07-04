@@ -11,14 +11,14 @@
 </head>
 <body>
    <py-script>
-import requests
-from bs4 import BeautifulSoup
+        import requests
+        from bs4 import BeautifulSoup
 
-URL = "https://codeprojects.org/VoP_lzaZzLWjc7BGzEYbFSMyTbHfdb29WN12Rg4U-Hw/"
-r = requests.get(URL)
+        URL = "https://codeprojects.org/VoP_lzaZzLWjc7BGzEYbFSMyTbHfdb29WN12Rg4U-Hw/"
+        r = requests.get(URL)
 
-soup = BeautifulSoup(r.content, 'html5lib')
-print(soup.prettify())
+        soup = BeautifulSoup(r.content, 'html5lib')
+        print(soup.prettify())
    </py-script>
 </body>
 </html>
